@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Determination Test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="app">
+        <section id="intro" class="screen">
+            <header>
+                <h1>Determination Test</h1>
+            </header>
+            <div class="intro-body">
+                <div class="intro-symbols" aria-hidden="true"><span class="intro-dot red-dot"></span><span class="intro-dot muted-dot"></span><span class="intro-foot"></span></div>
+                <div class="intro-content">
+                    <div class="instruction"><strong>Visual Monitoring:</strong> When the circular lights on the screen light up randomly, immediately press the corresponding button on your Arduino hardware panel.</div>
+                    <div class="instruction"><strong>Hands and Feet Coordination:</strong> Pay attention to the left and right blocks at the bottom of the screen. When a command appears, press the corresponding left or right foot pedal.</div>
+                    <div class="connection-row"><button id="connect" class="secondary-button">Connect Arduino</button><span id="connection" aria-live="polite">Not connected</span></div>
+                    <div class="actions"><button id="start" class="gold-button" disabled>Start</button></div>
+                </div>
+            </div>
+        </section>
+        <section id="test" class="screen" hidden>
+            <header>
+                <h1>Determination Test</h1>
+            </header>
+            <div class="test-body">
+                <div class="test-meta"><span id="counter">Trial: 0/20</span><span id="status" aria-live="polite">Waiting</span></div>
+                <div class="light-grid" aria-label="Visual stimuli">
+                    <div class="light" data-name="RED" aria-label="Red stimulus"></div>
+                    <div class="light" data-name="GREEN" aria-label="Green stimulus"></div>
+                    <div class="light" data-name="BLUE" aria-label="Blue stimulus"></div>
+                    <div class="light" data-name="WHITE" aria-label="White stimulus"></div>
+                    <div class="light decorative" aria-hidden="true"></div>
+                    <div class="light decorative" aria-hidden="true"></div>
+                    <div class="light decorative" aria-hidden="true"></div>
+                    <div class="light decorative" aria-hidden="true"></div>
+                    <div class="light decorative" aria-hidden="true"></div>
+                    <div class="light decorative" aria-hidden="true"></div>
+                </div>
+                <div class="foot-row">
+                    <div class="foot-indicator" data-name="LEFT"><span>LEFT</span></div>
+                    <div class="foot-indicator" data-name="RIGHT"><span>RIGHT</span></div>
+                </div>
+                <div class="test-actions"><button id="stop" class="secondary-button">Stop test</button></div>
+            </div>
+        </section>
+        <section id="results" class="screen result-screen" hidden>
+            <h2>Your Result</h2>
+            <div class="stats">
+                <article><span>Mean RT</span><b id="rt">—</b></article>
+                <article><span>Accuracy Rate</span><b id="accuracy">—</b></article>
+                <article><span>Omissions</span><b id="omissions">—</b></article>
+                <article><span>Commissions</span><b id="commissions">—</b></article>
+            </div>
+            <div class="result-actions"><button id="restart" class="gold-button">Restart</button><button id="csv" class="gold-button">Next · Export CSV</button></div>
+        </section>
+        <p id="message" class="message" role="status"></p>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

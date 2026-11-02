@@ -1,0 +1,401 @@
+:root {
+    font-family: Inter, Arial, sans-serif;
+    color: #f4f4f7;
+    background: #0b1434
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #0b1434
+}
+
+.app {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+    padding: 18px
+}
+
+.screen {
+    min-height: 620px;
+    background: #1c286c;
+    position: relative;
+    overflow: hidden
+}
+
+.screen[hidden] {
+    display: none !important
+}
+
+header {
+    height: 92px;
+    background: #202950;
+    display: flex;
+    align-items: center;
+    padding: 0 28px
+}
+
+h1,
+h2,
+.gold-button {
+    font-family: 'Alumni Sans SC', 'Arial Narrow', Impact, sans-serif;
+    text-transform: uppercase
+}
+
+h1 {
+    font-size: clamp(34px, 5vw, 53px);
+    margin: 0;
+    line-height: 1;
+    font-weight: 800
+}
+
+.intro-body {
+    display: grid;
+    grid-template-columns: 24% 76%;
+    min-height: 528px
+}
+
+.intro-symbols {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    background: #1b286e
+}
+
+.intro-dot {
+    display: block;
+    width: min(13vw, 132px);
+    height: min(13vw, 132px);
+    border-radius: 50%
+}
+
+.red-dot {
+    background: #d50912
+}
+
+.muted-dot {
+    background: #444e77
+}
+
+.intro-foot {
+    height: 100px;
+    width: 90px;
+    background: #ddd
+}
+
+.intro-content {
+    padding: 28px 32px 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px
+}
+
+.instruction {
+    font-size: clamp(15px, 1.6vw, 19px);
+    line-height: 1.35;
+    background: rgba(255, 255, 255, .095);
+    border: 1px solid rgba(255, 255, 255, .09);
+    border-radius: 5px;
+    padding: 18px 20px;
+    color: #e3e3e9
+}
+
+.instruction strong {
+    font-weight: 700
+}
+
+.connection-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: auto;
+    color: #d7d8e2;
+    font-size: 14px
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end
+}
+
+.gold-button {
+    min-width: 180px;
+    padding: 8px 28px;
+    background: #c69b48;
+    border: 0;
+    border-radius: 28px;
+    color: white;
+    font-size: 34px;
+    line-height: 1;
+    cursor: pointer
+}
+
+.gold-button:hover:not(:disabled) {
+    background: #d9b261
+}
+
+.gold-button:disabled {
+    opacity: .5;
+    cursor: not-allowed
+}
+
+.secondary-button {
+    border: 1px solid #b9c6e4;
+    border-radius: 7px;
+    background: #273665;
+    color: white;
+    padding: 10px 16px;
+    cursor: pointer;
+    font: 600 13px Inter, sans-serif
+}
+
+.test-body {
+    padding: 15px 36px 24px
+}
+
+.test-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-weight: 700;
+    font-size: 19px
+}
+
+.light-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 22px 30px;
+    margin: 25px auto 22px;
+    max-width: 850px
+}
+
+.light {
+    width: min(100%, 128px);
+    aspect-ratio: 1;
+    background: #dcdcdc;
+    border-radius: 50%;
+    justify-self: center;
+    transition: background .08s, box-shadow .08s
+}
+
+.light[data-name=RED].active {
+    background: #df0a16
+}
+
+.light[data-name=GREEN].active {
+    background: #22d45b
+}
+
+.light[data-name=BLUE].active {
+    background: #257bff
+}
+
+.light[data-name=WHITE].active {
+    background: #fff;
+    box-shadow: 0 0 0 6px #e2b657, 0 0 30px #fff
+}
+
+.light.active:not([data-name=WHITE]) {
+    box-shadow: 0 0 0 5px #d2a54c, 0 0 24px #d2a54c
+}
+
+.foot-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 10px 10px 0
+}
+
+.foot-indicator {
+    width: 95px;
+    height: 110px;
+    background: #dcdcdc;
+    color: #19255d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 800 23px 'Alumni Sans SC', sans-serif;
+    transition: background .08s, box-shadow .08s
+}
+
+.foot-indicator span {
+    opacity: .65
+}
+
+.foot-indicator.active {
+    background: #e3b45a;
+    box-shadow: 0 0 0 5px #fff7, 0 0 25px #edc878
+}
+
+.foot-indicator.active span {
+    opacity: 1
+}
+
+.test-actions {
+    text-align: center;
+    margin-top: 15px
+}
+
+.result-screen {
+    background: linear-gradient(135deg, rgba(5, 12, 39, .92), rgba(13, 30, 79, .91)), radial-gradient(circle at 35% 60%, #2670b3, #0a1234 70%);
+    padding: 40px 48px 30px
+}
+
+.result-screen:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: .3;
+    background: repeating-linear-gradient(90deg, transparent 0 90px, #1e70a22c 91px 92px)
+}
+
+.result-screen>* {
+    position: relative
+}
+
+.result-screen h2 {
+    text-align: center;
+    font-size: 52px;
+    margin: 0 0 25px;
+    line-height: 1
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    max-width: 850px;
+    margin: auto
+}
+
+.stats article {
+    min-height: 175px;
+    background: #e6e7f01d;
+    border: 1px solid #ffffff20;
+    padding: 18px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.stats span {
+    font: 600 25px 'Alumni Sans SC', sans-serif;
+    text-transform: uppercase
+}
+
+.stats b {
+    font-size: clamp(26px, 4vw, 46px);
+    color: #fff;
+    font-weight: 700
+}
+
+.result-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 35px auto 0;
+    max-width: 920px
+}
+
+.message {
+    font-size: 13px;
+    color: #e6e6e9;
+    min-height: 22px;
+    margin: 10px 0
+}
+
+@media(max-width:650px) {
+    .app {
+        padding: 0
+    }
+
+    .screen {
+        min-height: 100vh
+    }
+
+    header {
+        height: 70px;
+        padding: 0 16px
+    }
+
+    .intro-body {
+        grid-template-columns: 21% 79%
+    }
+
+    .intro-content {
+        padding: 18px 12px 18px 0;
+        gap: 14px
+    }
+
+    .intro-dot {
+        width: 55px;
+        height: 55px
+    }
+
+    .intro-foot {
+        width: 48px;
+        height: 70px
+    }
+
+    .instruction {
+        padding: 12px;
+        font-size: 13px
+    }
+
+    .test-body {
+        padding: 15px
+    }
+
+    .light-grid {
+        gap: 14px 9px
+    }
+
+    .foot-indicator {
+        width: 65px;
+        height: 85px
+    }
+
+    .result-screen {
+        padding: 45px 18px
+    }
+
+    .stats article {
+        min-height: 140px;
+        padding: 12px
+    }
+
+    .result-actions {
+        gap: 10px
+    }
+
+    .gold-button {
+        min-width: 120px;
+        font-size: 26px
+    }
+
+    .stats span {
+        font-size: 20px
+    }
+}
+
+/* Results page background */
+#results.screen {
+  background-image:
+    linear-gradient(
+      rgba(8, 13, 43, 0.45),
+      rgba(8, 13, 43, 0.65)
+    ),
+    url("./images/background.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

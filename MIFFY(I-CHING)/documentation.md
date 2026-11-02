@@ -1,7 +1,7 @@
-# Thomas dog bell
+# vienna test stimulator
 
 Voici la table des matières de mon rendu
-- [Code of the electronic part↗](cwiot/project.ino)
+- [Code of the electronic part↗](MIFFY/arduino.ino)
 - [schematic view](#schematic-view)
 - [Moodboard](#moodboard)
 - [UI on figma](#figma-ui)
@@ -11,20 +11,20 @@ Voici la table des matières de mon rendu
 ## schematic view
 <picture>
     <img
-        src="images/schematic-view.jpg" 
+        src="images/prototype.png" 
         alt="schematic view" 
         height="360" 
         width="640" 
     />
 </picture>
 
-This prototype uses an Adafruit HUZZAH32, along with a push button. It also includes a 10 kΩ resistor and jumper wires.
+This prototype uses an Ardiono UNO R3, along with a push button and a LED. It also includes a 220 Ω resistor and jumper wires. For final project, I want to duplicate 6 sets of design like this.
 
 ## Moodboard
 
 <picture>
   <img
-    src="images/moodboard.jpg"
+    src="images/moodboard.png"
     alt="schematic view" 
     height="360" 
     width="640" />
@@ -32,14 +32,15 @@ This prototype uses an Adafruit HUZZAH32, along with a push button. It also incl
 
 ## Figma UI
 
-![share your figma project](images/UI-figma.png)
+![share your figma project](images/figma.png)
 
->[!TIP]
->This file is part of the dww figma, so I cannot fully share it. Your documentation should include a link to your figma: `[figma UI↗](https://figma.com/your-design)`
+>[!Link]
+> `[figma UI↗](https://www.figma.com/design/cHp9hvTGh7oWCceOqwAORT/Miffy-dww-Project?node-id=3-2&t=YoXGjq3WlCnWjD7H-1)`
 
 ## Web part
 Here is a preview of the assignment. 
-![mockup-preview](images/mockup-preview.png)
+
+![mockup-preview](images/preview.png)
 
 ## Video
 
