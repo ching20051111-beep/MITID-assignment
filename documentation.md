@@ -11,10 +11,10 @@ Voici la table des matières de mon rendu
 ## schematic view
 <picture>
     <img
-        src="images/prototype.png" 
+        src="images/prototype.jpeg" 
         alt="schematic view" 
         height="360" 
-        width="640" 
+        width="500" 
     />
 </picture>
 
@@ -27,15 +27,15 @@ This prototype uses an Ardiono UNO R3, along with a push button and a LED. It al
     src="images/moodboard.png"
     alt="schematic view" 
     height="360" 
-    width="640" />
+    width="1200" />
 </picture>
 
 ## Figma UI
 
 ![share your figma project](images/figma.png)
 
->[!Link]
-> `[figma UI↗](https://www.figma.com/design/cHp9hvTGh7oWCceOqwAORT/Miffy-dww-Project?node-id=3-2&t=YoXGjq3WlCnWjD7H-1)`
+
+[figma UI↗](https://www.figma.com/design/cHp9hvTGh7oWCceOqwAORT/Miffy-dww-Project?node-id=3-2&t=YoXGjq3WlCnWjD7H-1)
 
 ## Web part
 Here is a preview of the assignment. 
@@ -44,4 +44,4 @@ Here is a preview of the assignment.
 
 ## Video
 
-[See the video on youtube↗](https://youtu.be/7-YfWs-cX3M)
+[See the video on youtube↗](https://www.youtube.com/watch?v=h3dTFVF36nQ)
